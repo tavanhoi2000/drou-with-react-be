@@ -81,7 +81,7 @@ class ProductController extends Controller
         if($result) {
             return response()->json(['message' => 'Delete product successfully']);
         } else {
-            return response()->json(['message' => 'Update product fail']);
+            return response()->json(['message' => 'Delete product fail']);
         };
 
     }
