@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\File;
 class ProductController extends Controller
 {
     public function index() {
-        $products = Product::orderBy('id','DESC')->get()->keyBy->id;
+        $products = Product::paginate(10);
         return new ProductResourceCollection($products);
     }
 

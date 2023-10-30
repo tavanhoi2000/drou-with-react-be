@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\File;
 class BlogController extends Controller
 {
     public function index() {
-        $blogs = Blog::orderBy('id','DESC')->get()->keyBy->id;
+        $blogs = Blog::paginate(10);
         return new BlogResourceCollection($blogs);
     }
 
